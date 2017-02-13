@@ -1,0 +1,22 @@
+{
+  "name": "lan",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Liderj/lanHun.git"
+  },
+  "keywords": [
+    "wechat"
+  ],
+  "author": "lider",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Liderj/lanHun/issues"
+  },
+  "homepage": "https://github.com/Liderj/lanHun#readme"
+}
