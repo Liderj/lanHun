@@ -1,63 +1,128 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="utf-8">
-<meta name="renderer" content="webkit">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<meta name="viewport" content="initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no">
-<!-- 页面描述 -->
-<meta name="description" content="不超过150个字符"/>
-<!-- 页面关键词 -->
-<meta name="keywords" content=""/>
-<title>个人中心</title>
-<meta name="description" content="">
-<meta name="keywords" content="">
-<link rel="stylesheet" type="text/css" href="./css/reset.css">
-
-<script type="text/javascript" src="./font-icon/iconfont.js"></script>
-<link rel="stylesheet" type="text/css" href="./css/common.css">
-<link rel="stylesheet" type="text/css" href="./css/ucenter.css">
-
-<link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no">
+    <!-- 页面描述 -->
+    <meta name="description" content="不超过150个字符" />
+    <!-- 页面关键词 -->
+    <meta name="keywords" content="" />
+    <title>个人中心</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" type="text/css" href="./css/reset.css">
+    <script type="text/javascript" src="./font-icon/iconfont.js"></script>
+    <link rel="stylesheet" type="text/css" href="./css/common.css">
+    <link rel="stylesheet" type="text/css" href="./css/ucenter.css">
+    <link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
+
 <body>
     <header class="text-center">
-   	 <a href="javascript:history.back()">
-	    <svg class="icon" aria-hidden="true">
-	   	 <use xlink:href="#icon-back"></use>
-		</svg>
-	</a>
-		蓝魂
-	</header>
-	<div class="content container-fluid">
-		<div class="row u-heade">
-			<div class="col-xs-3">
-				<a href="" class="u-heade-icon active">
-					<svg class="icon" aria-hidden="true">
-			   	 	<use xlink:href="#icon-talk"></use>
-					</svg>
-				</a>
-			</div>
-			<div class="col-xs-6">
-				<div class="fix">
-					<div class="userimg">
-						<img src="./img/timg.jpg" class="img-responsive" alt="">
-					</div>
-					<span>骑驴出山</span>
-				</div>
-			</div>
-			<div class="col-xs-3">
-				<a href="" class="u-heade-icon">
-					<svg class="icon" aria-hidden="true">
-			   	 	<use xlink:href="#icon-setting"></use>
-					</svg>
-				</a>
-			</div>
-		</div>
-	</div>
-	<footer>
-		<a href="index.html" class="col-xs-6 text-center active">首页</a>
-		<a href="index.html" class="col-xs-6 text-center ">运动圈</a>
-	</footer>
+        <a href="javascript:history.back()">
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-back"></use>
+            </svg>
+        </a>
+        蓝魂
+    </header>
+    <div class="content container-fluid">
+        <!-- 头像区域 -->
+        <div class="row u-heade">
+            <div class="col-xs-3">
+                <a href="" class="u-heade-icon active">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-talk"></use>
+                    </svg>
+                </a>
+            </div>
+            <div class="col-xs-6">
+                <div class="fix">
+                    <div class="userimg">
+                        <img src="./img/timg.jpg" class="img-responsive" alt="">
+                    </div>
+                    <span>骑驴出山</span>
+                </div>
+            </div>
+            <div class="col-xs-3">
+                <a href="" class="u-heade-icon">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-setting"></use>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <!-- 身高、体重、司职 -->
+        <div class="u-title row">
+            <span class="col-xs-4 text-center">
+							身高<br><i id="u-height">198</i>CM
+						</span>
+            <span class="col-xs-4 text-center">
+							体重<br><i id="u-weight">80</i>KG
+						</span>
+            <span class="col-xs-4 text-center">
+							司职<br><i id="u-job">得分后卫</i>
+						</span>
+        </div>
+        <!-- 卡片菜单 -->
+        <div class="u-card row">
+            <div class="card-item col-xs-6">
+                <a href="">
+                    <img src="./img/(1).png" class="img-responsive" alt="">
+                    <label>个人数据</label>
+                </a>
+            </div>
+            <div class="card-item col-xs-6">
+                <a href="">
+                    <img src="./img/(2).png" class="img-responsive" alt="">
+                    <label>我的球队</label>
+                </a>
+            </div>
+            <div class="card-item col-xs-6">
+                <a href="">
+                    <img src="./img/(3).png" class="img-responsive" alt="">
+                    <label>关注球队</label>
+                </a>
+            </div>
+            <div class="card-item col-xs-6">
+                <a href="">
+                    <img src="./img/(4).png" class="img-responsive" alt="">
+                    <label>关注球员</label>
+                </a>
+            </div>
+            <div class="card-item col-xs-6">
+                <a href="">
+                    <img src="./img/(5).png" class="img-responsive" alt="">
+                    <label>我的赛事</label>
+                </a>
+            </div>
+             <div class="card-item col-xs-6">
+                <a href="">
+                    <img src="./img/(6).png" class="img-responsive" alt="">
+                    <label>我的约战</label>
+                </a>
+            </div>
+             <div class="card-item col-xs-6">
+                <a href="">
+                    <img src="./img/(7).png" class="img-responsive" alt="">
+                    <label>我的对战</label>
+                </a>
+            </div>
+             <div class="card-item col-xs-6">
+                <a href="">
+                    <img src="./img/(8).png" class="img-responsive" alt="">
+                    <label>我的回忆</label>
+                </a>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <a href="index.html" class="col-xs-6 text-center active">首页</a>
+        <a href="index.html" class="col-xs-6 text-center ">运动圈</a>
+    </footer>
 </body>
+
 </html>
