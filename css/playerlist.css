@@ -1,0 +1,65 @@
+body {
+  color: #b2b2b2 !important;
+  background-color: #1b2026 !important;
+}
+.content .player-item {
+  margin: 10px 0;
+  height: 100px;
+  position: relative;
+  background-color: #272e36;
+  border-radius: 8px;
+}
+.content .player-item .col-xs-3 {
+  position: relative;
+  height: 100%;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.content .player-item .col-xs-3 .head-icon {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  border: 3px solid #162f9a;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.content .player-item .col-xs-7 {
+  height: 100%;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.content .player-item .col-xs-7 .player-info {
+  padding-top: 15px;
+}
+.content .player-item .col-xs-7 .player-info span {
+  display: inline-block;
+  width: 50%;
+  float: left;
+  line-height: 1.5;
+}
+.content .player-item .col-xs-7 .action {
+  padding-top: 5px;
+}
+.content .player-item .col-xs-7 .action span {
+  width: 60px;
+  margin-right: 10px;
+  display: inline-block;
+  text-align: center;
+  line-height: 24px;
+  height: 24px;
+  color: #fff;
+  border-radius: 8px;
+  border: 1px solid transparent;
+}
+.content .player-item .col-xs-7 .action span:first-child {
+  background-color: #455363;
+}
+.content .player-item .col-xs-7 .action span:last-child {
+  background-color: #337ab7;
+  border: 1px solid #389bf0;
+}
+.content .player-item .col-xs-7 .action span:last-child a {
+  color: #fff;
+}
