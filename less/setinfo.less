@@ -1,0 +1,62 @@
+body{
+	background-color: #1b2026 !important;
+
+}
+.content{
+	position: relative;
+	color: #b2b2b2;
+	#setImg{
+		height: 80px;
+		position: relative;
+		img{
+			width: 60px;
+			height: 60px;
+			border-radius: 50%;
+			top: 50%;
+			left: 20%;
+			position: absolute;
+			transform:translateY(-50%);
+		}
+	}
+	.form-group{
+		&:first-child{
+			.col-xs-3{
+				line-height: 80px;
+			}
+		}
+		.col-xs-3{
+			line-height: 40px;
+			text-align: center;
+			
+		}
+		.col-xs-9{
+			line-height: 40px;
+			input[type="text"],input[type="date"],input[type="email"]{
+				padding-top: 11px;
+				padding-bottom: 11px;
+				display: inline-block;
+				width: 100%;
+				background-color: transparent;
+				border: 1px solid #46474c;
+				height: 40px;
+				text-align: center;
+				color: #337ab7;
+				font-size: 16px;
+				line-height: 18px;
+
+			}
+			input[type="radio"]{
+				vertical-align: sub;
+				margin-right: 5px;
+			}
+			#address{
+				background: url("../img/icon/right.png") no-repeat 100% 50%;
+				background-size: 18px 18px;
+			}
+		}
+		.btn-danger{
+			background-color: #be0601;
+		}
+	}
+	
+}

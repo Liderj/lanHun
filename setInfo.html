@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no">
+    <!-- 页面描述 -->
+    <meta name="description" content="不超过150个字符" />
+    <!-- 页面关键词 -->
+    <meta name="keywords" content="" />
+    <title>个人信息设置</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" type="text/css" href="./css/reset.css">
+    <link rel="stylesheet" type="text/css" href="./css/common.css">
+    <link rel="stylesheet" type="text/css" href="./css/setinfo.css">
+    <link rel="stylesheet" type="text/css" href="./css/LArea.min.css">
+    <link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="text-center">
+        <a  href="javascript:history.back()">
+         <img class="icon" src="./img/icon/back.png" alt="">
+        </a>
+        蓝魂
+    </header>
+    <div class="content container-fluid">
+        <form class="form-horizontal">
+            <div class="form-group">
+                <leabl class="col-xs-3">头像:</leabl>
+                <a href="" class="col-xs-9" id="setImg">
+                   <img src="./img/timg.jpg" alt=""> 
+                </a>
+            </div>
+            <div class="form-group">
+                <leabl class="col-xs-3">昵称:</leabl>
+                <div class="col-xs-9">
+                    <input type="text" value="骑驴出山" >
+                </div> 
+            </div>
+            <div class="form-group">
+                <leabl class="col-xs-3">性别:</leabl>
+                <div class="col-xs-9">
+                    <div class="col-xs-6 text-center">
+                        <input type="radio" name="sex" id="man" checked=""><label for="sex">男</label>
+                    </div>
+                    <div class="col-xs-6 text-xenter">
+                        <input type="radio" name="sex" id="woman"><label for="sex">女</label>
+                    </div>
+                </div> 
+            </div>
+            <div class="form-group">
+                <leabl class="col-xs-3">生日:</leabl>
+                <div class="col-xs-9">
+                <!-- 默认1995-05-10  格式不可改变 -->
+                    <input type="date" id="Date" value="1995-05-10" >
+                </div> 
+            </div>
+            <div class="form-group">
+                <leabl class="col-xs-3">地区:</leabl>
+                <div class="col-xs-9">
+                    <input id="address" type="text" value="四川省,成都市,锦江区" readonly=""/>
+                    <input id="address2" type="hidden" />
+                </div> 
+            </div>
+            <div class="form-group">
+                <leabl class="col-xs-3">邮箱:</leabl>
+                <div class="col-xs-9">
+                    <input type="email" value="" >
+                </div> 
+            </div>
+            <div class="form-group">
+                <leabl class="col-xs-3">行业:</leabl>
+                <div class="col-xs-9">
+                    <input type="text" value="(IT)计算机" >
+                </div> 
+            </div>
+            <div class="form-group">
+                <leabl class="col-xs-3">职业:</leabl>
+                <div class="col-xs-9">
+                    <input type="text" value="软件工程师" >
+                </div> 
+            </div>
+            <div class="form-group">
+                <div class="col-xs-offset-1 col-xs-10">
+                  <button type="submit" id="submit" class="col-xs-12 btn btn-danger">保存</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <footer>
+        <a href="index.html" class="col-xs-6 text-center active">首页</a>
+        <a href="index.html" class="col-xs-6 text-center ">运动圈</a>
+    </footer>
+    <script type="text/javascript" src="./js/zepto.js"></script>
+    <!-- 地区选择插件 -->
+    <script type="text/javascript" src="./js/AreaData.js"></script>
+    <script type="text/javascript" src="./js/LArea.min.js"></script>
+
+    <script type="text/javascript">
+    // 地区选择插件
+        var area = new LArea();
+        area.init({
+            'trigger': '#address',
+            'valueTo': '#address2',
+            'keys': {
+                id: 'value',
+                name: 'text'
+            },
+            'type': 2,
+            'data': [provs_data, citys_data, dists_data]
+        });
+        $("#submit").on("click",function () {
+            event.preventDefault();
+            // 获取生日
+            console.log($("#Date").val());
+            // 获取地区
+            console.log($("#address").val());
+        })
+    </script>
+</body>
+
+</html>
