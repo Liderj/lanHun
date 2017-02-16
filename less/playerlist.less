@@ -3,7 +3,8 @@ body{
   background-color: #1b2026 !important;
 }
 .content{
-	.player-item{
+
+	.player-item,.followed-item{
 		margin:10px 0;
 		height: 120px;
 		position: relative;
@@ -55,7 +56,7 @@ body{
 					&:first-child{
 						background-color:  #455363;
 					}
-					&:last-child,&.active-btn{
+					&:nth-child(2),&.active-btn{
 						background-color: #337ab7 ;
 						border:1px solid #389bf0;
 						a{
@@ -66,10 +67,21 @@ body{
 			}
 		}
 		.col-xs-2{
-			height: 100%;
+			 height: 100%;
 		   padding-right: 10px;
 		   padding-left: 10px;
 		   position: relative;
+		   .unfollow{
+				position: absolute;
+				width: 25px;
+				height: 25px;
+				background-color: red;
+				top: 50%;	
+				left: 50%;
+				transform:translate(-50%,-50%);
+				background: url(../img/icon/followed.png) no-repeat;
+				background-size: 100%;
+				}
 		   div{
 		   	text-align: center;
 		   	line-height: 1;
@@ -106,5 +118,20 @@ body{
 		   }
 		  
 		}
+	}
+	.followed-item{
+		height: 100px;
+		.col-xs-7{
+			height: 100%;
+			span{
+				display: block;
+				float: left;
+				height: 100%;
+				text-align: center;
+				line-height: 100px;
+				width: 50%;
+			}
+		}
+		
 	}
 }
