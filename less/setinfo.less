@@ -36,12 +36,13 @@ body{
 			input[type="text"],input[type="date"],input[type="email"]{
 				padding-top: 11px;
 				padding-bottom: 11px;
+				padding-left: 5px;
 				display: inline-block;
 				width: 100%;
 				background-color: transparent;
 				border: 1px solid #46474c;
 				height: 40px;
-				text-align: center;
+				text-align: left;
 				color: #337ab7;
 				font-size: 16px;
 				line-height: 18px;
@@ -51,9 +52,21 @@ body{
 				vertical-align: sub;
 				margin-right: 5px;
 			}
-			#address{
+			#address, select{
 				background: url("../img/icon/right.png") no-repeat 100% 50%;
 				background-size: 18px 18px;
+			}
+			select{
+				display: inline-block;
+				width: 100%;
+				border: 1px solid #46474c;
+				height: 40px;
+				// text-align: center;
+				color: #337ab7;
+				font-size: 16px;
+				line-height: 40px;
+				background-color: transparent;
+				text-align-last:center;
 			}
 		}
 		.btn-danger{

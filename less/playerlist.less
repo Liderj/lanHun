@@ -5,7 +5,7 @@ body{
 .content{
 	.player-item{
 		margin:10px 0;
-		height: 100px;
+		height: 120px;
 		position: relative;
 		background-color: #272e36;
 		border-radius: 8px;
@@ -15,8 +15,8 @@ body{
 			padding-left: 0px;
 			padding-right: 0px;
 			.head-icon{
-				width: 55px;
-				height: 55px;
+				width: 60px;
+				height: 60px;
 				border-radius: 50%;
 				border:3px solid #162f9a;
 				position: absolute;
@@ -30,7 +30,8 @@ body{
 			padding-left: 0px;
 			padding-right: 0px;
 			.player-info{
-				padding-top: 15px;
+				padding-top: 20px;
+				height: 50%;
 					span{
 					display: inline-block;
 					width: 50%;
@@ -40,9 +41,9 @@ body{
 			}
 			
 			.action{
-				padding-top: 5px;
+				padding-top: 10px;
 				span{
-					width: 60px;
+					width: 70px;
 					margin-right: 10px;
 					display: inline-block;
 					text-align: center;
@@ -54,8 +55,8 @@ body{
 					&:first-child{
 						background-color:  #455363;
 					}
-					&:last-child{
-						background-color: #337ab7;
+					&:last-child,&.active-btn{
+						background-color: #337ab7 ;
 						border:1px solid #389bf0;
 						a{
 							color:#fff;
@@ -63,6 +64,47 @@ body{
 					}
 				}
 			}
+		}
+		.col-xs-2{
+			height: 100%;
+		   padding-right: 10px;
+		   padding-left: 10px;
+		   position: relative;
+		   div{
+		   	text-align: center;
+		   	line-height: 1;
+		   	i{
+		   		font-style: normal;
+		   	}
+		   	span{
+		   		display: block;
+		   		width: 25px;
+		   		height: 25px;
+		   		margin: 15px auto 0;
+		   	}
+		   	&:first-child{
+		   		.clicked{
+		   			background: url("../img/icon/followed.png") no-repeat;
+		   			background-size: 100%;
+		   		}
+		   		span{
+		   			background: url("../img/icon/follow.png") no-repeat;
+		   			background-size: 100%;
+		   		}
+		   	}
+		   	&:last-child{
+		   		.clicked{
+		   			background: url("../img/icon/liked.png") no-repeat;
+		   			background-size: 100%;
+		   		}
+		   		span{
+		   			margin-top: 10px;
+		   			background: url("../img/icon/like.png") no-repeat;
+		   			background-size: 100%;
+		   		}
+		   	}
+		   }
+		  
 		}
 	}
 }
