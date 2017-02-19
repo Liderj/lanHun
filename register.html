@@ -13,7 +13,6 @@
 <meta name="description" content="">
 <meta name="keywords" content="">
 <link rel="stylesheet" type="text/css" href="./css/reset.css">
-<script type="text/javascript" src="./font-icon/iconfont.js"></script>
 <link rel="stylesheet" type="text/css" href="./css/common.css">
 <link rel="stylesheet" type="text/css" href="./css/register.css">
 <link href="./node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
@@ -66,5 +65,23 @@
 		<a href="index.html" class="col-xs-6 text-center ">首页</a>
 		<a href="uCenter.html" class="col-xs-6 text-center active">运动圈</a>
 	</footer>
+	<script type="text/javascript" src="./js/zepto.js"></script>
+	<script>
+		$("#getVerify").on("click",function () {
+			var s =120;
+			var _this=$(this);
+			_this.attr("disabled","true");
+			var dao = setInterval(function () {
+				s=s-1;
+				_this.val(s+'s');
+				if(s==0){
+					window.clearInterval(dao);
+					_this.attr("disabled","false");
+					_this.val("获取验证码");
+				}
+			},1000)
+
+		})
+	</script>
 </body>
 </html>
