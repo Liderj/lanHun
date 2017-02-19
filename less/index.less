@@ -29,7 +29,7 @@
 		margin: 0 auto;
 		text-align: center;
 		height: 110px;
-		background-color: #eee;
+	
 		color: #fff;
 		border-radius: 7px;
 		margin-top: 20px;
@@ -40,4 +40,16 @@
 			height: 60px;
 		}
 	}
+	.bgimgwhile(1);
+}
+
+
+.bgimgwhile(@counter) when (@counter < 7 ) {
+   li:nth-child(@{counter}) {
+   	a{
+   		background:url("../img/index_@{counter}.png") no-repeat center center;
+       background-size: 100%;
+   	}
+   }
+.bgimgwhile(( @counter + 1 ));// 递归调用自身
 }
