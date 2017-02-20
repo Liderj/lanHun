@@ -29,24 +29,7 @@
         蓝魂
     </header>
     <div class="swiper-container">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <a href="">
-                    <img src="./img/banner (2).png" alt="">
-                </a>
-            </div>
-            <div class="swiper-slide">
-                <a href="">
-                    <img src="./img/banner (2).png" alt="">
-                </a>
-            </div>
-            <div class="swiper-slide">
-                <a href="">
-                    <img src="./img/banner (2).png" alt="">
-                </a>
-            </div>
-        </div>
-        <div class="swiper-pagination"></div>
+        <img src="./img/banner (2).png" alt="">
     </div>
     <div class="content container-fluid">
         <div class="team-desc row">
@@ -64,47 +47,44 @@
         <div class="tab-content">
             <div role="tabpanel" class="tab-pane active" id="zhanji">
                 <div class="container">
-                <div class="circle row">
-                    <div class="col-xs-5">
-                        <div class="a">
-                            <div class="circleProgress_wrapper">
-                                <div class="wrapper right">
-                                    <div class="circleProgress rightcircle"></div>
+                    <div class="circle row">
+                        <div class="col-xs-5">
+                            <div class="a">
+                                <div class="circleProgress_wrapper">
+                                    <div class="wrapper right">
+                                        <div class="circleProgress rightcircle"></div>
+                                    </div>
+                                    <div class="wrapper left">
+                                        <div class="circleProgress leftcircle"></div>
+                                    </div>
+                                    <div class="circleProgress_content">
+                                        <span>112</span>
+                                        <span>胜</span>
+                                    </div>
                                 </div>
-                                <div class="wrapper left">
-                                    <div class="circleProgress leftcircle"></div>
+                            </div>
+                        </div>
+                        <div class="col-xs-2 text-center">vs</div>
+                        <div class="col-xs-5">
+                            <div class="a">
+                                <div class="circleProgress_wrapper">
+                                    <div class="wrapper right">
+                                        <div class="circleProgress rightcircle"></div>
+                                    </div>
+                                    <div class="wrapper left">
+                                        <div class="circleProgress leftcircle"></div>
+                                    </div>
+                                    <div class="circleProgress_content">
+                                        <span>112</span>
+                                        <span>负</span>
+                                    </div>
                                 </div>
-                                <div class="circleProgress_content">
-                                    <span>112</span>
-                                    <span>胜</span>
-                                </div>
-                         </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-xs-2 text-center">vs</div>
-                    <div class="col-xs-5">
-                        <div class="a">
-                            <div class="circleProgress_wrapper">
-                                <div class="wrapper right">
-                                    <div class="circleProgress rightcircle"></div>
-                                </div>
-                                <div class="wrapper left">
-                                    <div class="circleProgress leftcircle"></div>
-                                </div>
-                                <div class="circleProgress_content">
-                                    <span>112</span>   
-                                    <span>负</span>
-                                </div>
-                         </div>
-                        </div>
-                    </div>
+                    <div class="winning"><span></span><i>胜率:0%</i></div>
+                    <a class="Submit">管理球队</a>
                 </div>
-                    
-                    
-                <a class="Submit">管理球队</a>
-
-                </div>
-
             </div>
             <div role="tabpanel" class="tab-pane" id="record">
                 <div class="container">
@@ -113,7 +93,7 @@
                         <img class="img-responsive" src="./img/hot.png" alt="">
                     </div>
                     <div class="record-list">
-                       <!--  <div class="record-item">
+                        <!--  <div class="record-item">
                             <div class="col-xs-5 draw clearfix">
                                 <div class="touxiang pull-left">
                                     <img src="./img/timg.jpg" alt="">
@@ -189,8 +169,7 @@
                             </div>
                         </div>
                     </div>
-                <a class="Submit">管理球队</a>
-
+                    <a class="Submit">管理球队</a>
                 </div>
             </div>
             <div role="tabpanel" class="tab-pane" id="info">
@@ -207,7 +186,7 @@
                         </div>
                         <div class="action">
                             <span>控球</span>
-                            <span class="pull-right"><a>剔除</a></span>
+                            <span class="pull-right"><a class="delete">剔除</a></span>
                         </div>
                     </div>
                 </div>
@@ -224,7 +203,7 @@
                         </div>
                         <div class="action">
                             <span>控球</span>
-                            <span class="pull-right"><a >剔除</a></span>
+                            <span class="pull-right"><a class="delete">剔除</a></span>
                         </div>
                     </div>
                 </div>
@@ -241,7 +220,7 @@
                         </div>
                         <div class="action">
                             <span>控球</span>
-                            <span class="pull-right"><a >剔除</a></span>
+                            <span class="pull-right"><a class="delete">剔除</a></span>
                         </div>
                     </div>
                 </div>
@@ -255,13 +234,39 @@
         <script type="text/javascript" src="./js/zepto.js"></script>
         <script type="text/javascript" src="./node_modules/jquery/dist/jquery.min.js"></script>
         <script type="text/javascript" src="./node_modules/bootstrap/js/tab.js"></script>
-        <script type="text/javascript" src="./node_modules/swiper/dist/js/swiper.min.js"></script>
         <script type="text/javascript">
-        var swiper = new Swiper('.swiper-container', {
-            pagination: '.swiper-pagination',
-            loop: true,
-            autoplay: 4000,
+        function setW(e) {
+            var W = $('.winning').width() * e;
+            if ((W + 60) > $('.winning').width()) {
+                setTimeout(function() {
+                    $('.winning i').css({
+                        'right': 0,
+                        'display': 'inline-block'
+                    })
 
+                }, 2000)
+            } else {
+                setTimeout(function() {
+                    $('.winning i').css({
+                        'display': 'inline-block'
+                    })
+                }, 1000)
+            }
+            $(".winning span").animate({
+                width: W
+            }, 2000);
+            $('.winning i').text('胜率:' + e * 100 + '%');
+        }
+
+        // 胜率横条
+        setW(.992);
+
+        // 剔除按钮
+        $('.delete').on('click', function() {
+            var _this = $(this).parents('.player-item');
+            _this.slideUp(300, function() {
+                _this.remove()
+            });
         });
         </script>
 </body>

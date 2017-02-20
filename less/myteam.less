@@ -1,0 +1,48 @@
+body {
+    background-color: #121518 !important;
+}
+
+.myteam-item {
+    margin: 10px 0;
+    height: 100px;
+    position: relative;
+    background-color: #1b2026;
+    border-radius: 8px;
+    color: #b2b2b2;
+    padding: 15px;
+    .col-xs-3 {
+        height: 100%;
+        img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 3px solid #162f9a;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        &:nth-child(2) {
+            padding: 0;
+            .player-info {
+                span {
+                    line-height: 35px;
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+    .col-xs-6 {
+        line-height: 70px;
+        padding: 0;
+        text-align: center;
+        a {
+            padding: 5px;
+            background-color: #337ab7;
+            border: 1px solid #389bf0;
+            border-radius: 10px;
+            color: #fff;
+            margin-right: 5px;
+        }
+    }
+}
