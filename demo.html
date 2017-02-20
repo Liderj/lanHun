@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>demo</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<style type="text/css">
+body,html{
+	width: 100%;
+	height: 100%;
+	margin:0;
+	padding: 0;
+
+}
+		.a{
+			 border:1px solid #207cca;
+		     border-radius: 50%;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            width: 90px;
+            height: 90px;
+		}
+		.circleProgress_wrapper{
+            width: 80px;
+            height: 80px;
+            position: relative;
+           	margin: 5px auto;
+           
+        }
+        .circleProgress_content{
+        	text-align: center;
+        	line-height: 80px;
+            -webkit-animation: fadeIn 2s linear 1 forwards;
+
+        }
+        .wrapper{
+		    width: 40px;
+		    height: 80px;
+		    position: absolute;
+		    top:0;
+		    overflow: hidden;
+		}
+		.right{
+		    right:0;
+		}
+		.left{
+		    left:0;
+		    z-index: -1;
+		}
+         .circleProgress{
+            width: 70px;
+            height: 70px;
+            border:5px solid transparent;
+            border-radius: 50%;
+            position: absolute;
+            top:0;
+            -webkit-transform: rotate(-135deg);
+        }
+		.rightcircle{
+            border-top:5px solid #207cca;
+            border-right:5px solid #207cca;
+            right:0;
+            -webkit-animation: circleProgressLoad_right 1s linear 1 forwards;
+        }
+        .leftcircle{
+            border-bottom:5px solid #207cca;
+            border-left:5px solid #207cca;
+            left:0;
+            -webkit-animation: circleProgressLoad_left 1s linear 1 forwards;
+        }
+        @-webkit-keyframes fadeIn{
+        	0%,50%{opacity: 0}
+
+        	100%{
+        		opacity: 1;
+        	}
+        }
+       
+        @-webkit-keyframes circleProgressLoad_right{
+            0%{
+                -webkit-transform: rotate(-135deg);
+            }
+            50%,100%{
+                -webkit-transform: rotate(45deg);
+            }
+        }
+        @-webkit-keyframes circleProgressLoad_left{
+            0%,50%{
+                -webkit-transform: rotate(-135deg);
+            }
+            100%{
+                -webkit-transform: rotate(45deg);
+            }
+        }
+</style>	
+</head>
+<body>
+<div class="a">
+	<div class="circleProgress_wrapper">
+        <div class="wrapper right">
+            <div class="circleProgress rightcircle"></div>
+        </div>
+        <div class="wrapper left">
+            <div class="circleProgress leftcircle"></div>
+        </div>
+        <div class="circleProgress_content">
+        	112
+        	胜
+        </div>
+ </div>
+</div>
+
+    
+</body>
+</html>

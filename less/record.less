@@ -55,6 +55,147 @@ body {
     }
 }
 
+// 球队战绩
+#zhanji{
+    .col-xs-5{
+        position: relative;
+        height: 120px;
+        &:last-child{
+            .a{
+                border:1px solid @fail-border-color;
+            }
+            .circleProgress{
+                background-color: @fail-background-color;
+            }
+            .rightcircle{
+                border-top:5px solid  @fail-border-color;
+                border-right:5px solid  @fail-border-color;
+            }
+            .leftcircle{
+                border-bottom:5px solid  @fail-border-color;
+                border-left:5px solid  @fail-border-color;
+            }
+            .circleProgress_content{
+                span{
+                    color: @fail-font-color
+                }
+            }
+        }
+    }
+    .col-xs-2{
+        height: 120px;
+        line-height: 120px;
+        font-size: 30px;
+        padding: 0;
+    }
+}
+ // 环形动画
+    @win-background-color:#192c42;
+    @win-border-color : #207cca;
+    @win-font-color:#29a2ff;
+    
+    @fail-border-color:#ca2020;
+    @fail-font-color:#fc6565;
+    @fail-background-color:#421919;
+  .a{
+    
+
+     border:1px solid #207cca;
+     border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 90px;
+    height: 90px;
+    .circleProgress_wrapper{
+    width: 80px;
+    height: 80px;
+    position: relative;
+    margin: 4px auto;
+
+   
+}
+.circleProgress_content{
+    text-align: center;
+    position: relative;
+    padding-top: 10px;
+    background-color: transparent;
+    -webkit-animation: fadeIn 2s linear 1 forwards;
+    span{
+        font-size: 20px;
+        line-height: 30px;
+        display: inline-block;
+        width: 100%;
+        color: @win-font-color;
+    }
+
+}
+.wrapper{
+    width: 40px;
+    height: 80px;
+    position: absolute;
+    top:0;
+    overflow: hidden;
+}
+.right{
+    right:0;
+}
+.left{
+    left:0;
+    z-index: -1;
+}
+ .circleProgress{
+    width: 80px;
+    height: 80px;
+    border:5px solid transparent;
+    border-radius: 50%;
+    position: absolute;
+    top:0;
+    background-color: @win-background-color;
+    -webkit-transform: rotate(-135deg);
+}
+.rightcircle{
+    border-top:5px solid #207cca;
+    border-right:5px solid #207cca;
+    right:0;
+    -webkit-animation: circleProgressLoad_right 1s linear 1 forwards;
+}
+.leftcircle{
+    border-bottom:5px solid #207cca;
+    border-left:5px solid #207cca;
+    left:0;
+    -webkit-animation: circleProgressLoad_left 1s linear 1 forwards;
+}
+@-webkit-keyframes fadeIn{
+    0%,50%{opacity: 0}
+
+    100%{
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes circleProgressLoad_right{
+    0%{
+        -webkit-transform: rotate(-135deg);
+    }
+    50%,100%{
+        -webkit-transform: rotate(45deg);
+    }
+}
+@-webkit-keyframes circleProgressLoad_left{
+    0%,50%{
+        -webkit-transform: rotate(-135deg);
+    }
+    100%{
+        -webkit-transform: rotate(45deg);
+    }
+}
+}
+        
+
+
+// 参赛记录
 #record {
     .container {
         padding: 10px 0;
@@ -176,3 +317,4 @@ body {
         }
     }
 }
+
