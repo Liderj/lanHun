@@ -1,0 +1,127 @@
+body {
+  background-color: #121619 !important;
+}
+.addyz {
+  color: #fff;
+  position: absolute;
+  right: 15px;
+}
+.nav-tabs {
+  padding: 10px 0;
+  background-color: #121619;
+  border-bottom: none !important;
+}
+.nav-tabs li {
+  padding: 0;
+  position: relative;
+}
+.nav-tabs li a {
+  width: 60%;
+  padding: 5px 0px !important;
+  color: #d8d7d7 !important;
+  border: 1px solid transparent !important;
+  border-radius: 20px !important;
+  background-color: #454142;
+  margin: 0 auto !important;
+}
+.nav-tabs li a:hover,
+.nav-tabs li a:focus {
+  background-color: transparent !important;
+}
+.nav-tabs li.active a {
+  border: 1px solid #be0502 !important;
+  color: #fe635f !important;
+  background-color: #6b0503 !important;
+}
+.tab-content .yz-title {
+  position: absolute;
+  width: 100%;
+  display: inline-block;
+  line-height: 1.5;
+  font-size: 18px;
+  color: #fff;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.tab-content img {
+  width: 100%;
+  height: 110px;
+}
+.tab-content .yz-desc {
+  position: relative;
+}
+.tab-content .yz-desc .col-xs-8 {
+  padding-bottom: 10px;
+  padding-top: 10px;
+  background-color: #1b2026;
+}
+.tab-content .yz-desc .col-xs-8 span {
+  color: #b1b1af ;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.tab-content .yz-desc .col-xs-8 span label {
+  background-color: #6b0503;
+  border-radius: 8px;
+  color: #ff625f;
+  text-align: center;
+  padding: 0 10px;
+  margin-right: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-weight: normal;
+}
+.tab-content .yz-desc .col-xs-4 {
+  background-color: #121619;
+  position: relative;
+  height: 100%;
+}
+.tab-content .yz-desc .col-xs-4 i {
+  display: block;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  margin: 10px auto;
+  text-align: center;
+  font-size: 40px;
+  color: #fff;
+  background-color: #3379b5;
+  border-radius: 50%;
+  font-style: normal;
+}
+.tab-content .yz-desc .col-xs-4 span {
+  color: #3379b5;
+}
+.tab-content .yz-desc .col-xs-4 .yz-btn {
+  height: 50%;
+  position: relative;
+}
+.tab-content .yz-desc .col-xs-4 .yz-btn a {
+  background-color: #337bb6;
+  padding: 5px 15px;
+  position: absolute;
+  bottom: 10px;
+  display: inline-block;
+  color: #fff;
+  white-space: nowrap;
+  left: 50%;
+  border-radius: 15px;
+  border: 1px solid #379bf0;
+  transform: translateX(-50%);
+}
+.tab-content .yz-desc .col-xs-4 .yz-btn input {
+  background-color: #690601;
+  padding: 5px 15px;
+  position: absolute;
+  top: 10px;
+  display: inline-block;
+  color: #e4918d;
+  white-space: nowrap;
+  left: 50%;
+  border-radius: 15px;
+  border: 1px solid #be0502;
+  transform: translateX(-50%);
+}
