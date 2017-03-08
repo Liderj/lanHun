@@ -10,11 +10,47 @@ body{
 		position: relative;
 		background-color: #272e36;
 		border-radius: 8px;
+		&:nth-child(1){
+			.col-xs-3{
+				span{
+					background-color: #f5433f;
+				}
+			}
+		}
+		&:nth-child(2){
+			.col-xs-3{
+				span{
+					background-color: #f6873f;
+				}
+			}
+		}
+		&:nth-child(3){
+			.col-xs-3{
+				span{
+					background-color: #f5c040;
+				}
+			}
+		}
 		.col-xs-3{
 			position: relative;
 			height: 100%;
 			padding-left: 0px;
 			padding-right: 0px;
+			span{
+				font-size: 18px;
+				background-color: #b2b2b2;
+				display: inline-block;
+				width: 25px;
+				height: 25px;
+				border-radius: 50%;
+					position: absolute;
+				top:50%;
+				color:#fff;
+				text-align: center;
+				line-height: 25px;
+				left: 50%;
+				transform:translate(-50%,-50%);
+			}
 			.head-icon{
 				width: 60px;
 				height: 60px;
@@ -40,7 +76,9 @@ body{
 					line-height: 1.5;
 				}
 			}
-			
+			.rank-team{
+				line-height: 120px;
+			}
 			.action{
 				padding-top: 10px;
 				span{
@@ -117,6 +155,9 @@ body{
 		   	}
 		   }
 		  
+		}
+		.col-xs-6{
+			line-height: 100px;
 		}
 	}
 	.followed-item{
