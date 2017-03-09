@@ -1,5 +1,4 @@
 // out: ../css/challenge.css, sourcemap: false, compress: true
-
 .item {
     background-color: #272e36;
     height: 100px;
@@ -29,30 +28,67 @@
                 border: 2px solid #162f9a;
             }
         }
-        .item-info{
-          position: absolute;
-          left: 43%;
-          width: auto;
-          span{
-            color: #d8d7d7;
-            display: block;
-            white-space: nowrap;
-            i{
-              font-style: normal;
-              color:#4a9fc8;
+        .item-info {
+            position: absolute;
+            left: 43%;
+            width: auto;
+            span {
+                color: #d8d7d7;
+                display: block;
+                white-space: nowrap;
+                i {
+                    font-style: normal;
+                    color: #4a9fc8;
+                }
             }
-          }
         }
-        .mu-item{
+        .mu-item {
             width: 50%;
             height: 100%;
             line-height: 60px;
             text-align: right;
-            span{
-              color: #d8d7d7;
-              background-color: #121619;
-              padding: 5px;
-              border-radius: 5px;
+            span {
+                color: #d8d7d7;
+                background-color: #121619;
+                padding: 5px;
+                border-radius: 5px;
+            }
+        }
+    }
+}
+
+#myresolve .item {
+    .item-info {
+        height: 60px;
+        line-height: 30px;
+    }
+    .col-xs-6 {
+        line-height: 30px;
+        input {
+            width: 56px;
+            border: none;
+            height: 25px;
+            line-height: 25px;
+            border-radius: 10px;
+            margin-right: 5px;
+            outline: none;
+            &:nth-child(1) {
+                color: #d8d7d7;
+                background-color: #454142;
+            }
+            &:nth-child(3) {
+                color: #ee5a56;
+                background-color: #6b0503;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 321px) {
+    #myresolve .item {
+        .col-xs-6 {
+            input {
+                width: 80px;
             }
         }
     }

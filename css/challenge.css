@@ -1,1 +1,86 @@
-.item{background-color:#272e36;height:100px;margin-top:10px;margin-left:10px;margin-right:10px;border-radius:5px}.item .col-xs-6{height:100%;padding-top:20px;padding-bottom:20px}.item .col-xs-6:first-child{padding-right:5px;padding-left:0}.item .col-xs-6:last-child{padding-left:5px;padding-right:0}.item .col-xs-6 .touxiang{height:100%;width:43%}.item .col-xs-6 .touxiang img{width:60px;height:60px;border-radius:50%;border:2px solid #162f9a}.item .col-xs-6 .item-info{position:absolute;left:43%;width:auto}.item .col-xs-6 .item-info span{color:#d8d7d7;display:block;white-space:nowrap}.item .col-xs-6 .item-info span i{font-style:normal;color:#4a9fc8}.item .col-xs-6 .mu-item{width:50%;height:100%;line-height:60px;text-align:right}.item .col-xs-6 .mu-item span{color:#d8d7d7;background-color:#121619;padding:5px;border-radius:5px}
+.item {
+  background-color: #272e36;
+  height: 100px;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+.item .col-xs-6 {
+  height: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.item .col-xs-6:first-child {
+  padding-right: 5px;
+  padding-left: 0px;
+}
+.item .col-xs-6:last-child {
+  padding-left: 5px;
+  padding-right: 0px;
+}
+.item .col-xs-6 .touxiang {
+  height: 100%;
+  width: 43%;
+}
+.item .col-xs-6 .touxiang img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid #162f9a;
+}
+.item .col-xs-6 .item-info {
+  position: absolute;
+  left: 43%;
+  width: auto;
+}
+.item .col-xs-6 .item-info span {
+  color: #d8d7d7;
+  display: block;
+  white-space: nowrap;
+}
+.item .col-xs-6 .item-info span i {
+  font-style: normal;
+  color: #4a9fc8;
+}
+.item .col-xs-6 .mu-item {
+  width: 50%;
+  height: 100%;
+  line-height: 60px;
+  text-align: right;
+}
+.item .col-xs-6 .mu-item span {
+  color: #d8d7d7;
+  background-color: #121619;
+  padding: 5px;
+  border-radius: 5px;
+}
+#myresolve .item .item-info {
+  height: 60px;
+  line-height: 30px;
+}
+#myresolve .item .col-xs-6 {
+  line-height: 30px;
+}
+#myresolve .item .col-xs-6 input {
+  width: 56px;
+  border: none;
+  height: 25px;
+  line-height: 25px;
+  border-radius: 10px;
+  margin-right: 5px;
+  outline: none;
+}
+#myresolve .item .col-xs-6 input:nth-child(1) {
+  color: #d8d7d7;
+  background-color: #454142;
+}
+#myresolve .item .col-xs-6 input:nth-child(3) {
+  color: #ee5a56;
+  background-color: #6b0503;
+}
+@media screen and (min-width: 321px) {
+  #myresolve .item .col-xs-6 input {
+    width: 80px;
+  }
+}
