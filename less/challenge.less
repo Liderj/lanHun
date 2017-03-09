@@ -1,0 +1,59 @@
+// out: ../css/challenge.css, sourcemap: false, compress: true
+
+.item {
+    background-color: #272e36;
+    height: 100px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    .col-xs-6 {
+        &:first-child {
+            padding-right: 5px;
+            padding-left: 0px;
+        }
+        &:last-child {
+            padding-left: 5px;
+            padding-right: 0px;
+        }
+        height: 100%;
+        padding-top:20px;
+        padding-bottom: 20px;
+        .touxiang {
+            height: 100%;
+            width: 43%;
+            img {
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                border: 2px solid #162f9a;
+            }
+        }
+        .item-info{
+          position: absolute;
+          left: 43%;
+          width: auto;
+          span{
+            color: #d8d7d7;
+            display: block;
+            white-space: nowrap;
+            i{
+              font-style: normal;
+              color:#4a9fc8;
+            }
+          }
+        }
+        .mu-item{
+            width: 50%;
+            height: 100%;
+            line-height: 60px;
+            text-align: right;
+            span{
+              color: #d8d7d7;
+              background-color: #121619;
+              padding: 5px;
+              border-radius: 5px;
+            }
+        }
+    }
+}
