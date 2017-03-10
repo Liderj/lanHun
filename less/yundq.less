@@ -1,0 +1,105 @@
+// out: ../css/yundq.css, sourcemap: false, compress: true
+body{
+	background-color: #1b2026 !important;
+}
+.content{
+  color: #b1b1af;
+  .nav-btn{
+    background-color: #121619;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    a{
+      color: #b1b1af;
+    }
+    img{
+      width: 35px;
+      height: auto;
+    }
+    .col-xs-4{
+      border-right: 1px solid #807f7d;
+      &:last-child{
+        border-right: none;
+      }
+    }
+  }
+  section{
+    .player-info{
+      padding-top: 10px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #807f7d;
+      img{
+        width: 60px;
+        height: 60px;
+        border: 3px solid #162f9a;
+        border-radius: 50%;
+      }
+      label{
+        margin-bottom: 0;
+        color: #807f7d;
+        display: block;
+      }
+    }
+
+    .player-center{
+      padding-top: 10px;
+      .center-text{
+        line-height: 1.5;
+        margin-bottom: 10px;
+      }
+      .center-img{
+        .col-xs-4{
+          padding-left: 5px;
+          padding-right: 5px;
+          max-height: 80px;
+        }
+      }
+
+    }
+    .action{
+      line-height: 40px;
+      img,span{
+        width: 22px;
+        height: 22px;
+        margin-left: 10px;
+        display: inline-block;
+      }
+      span{
+        background: url('../img/icon/follow.png') no-repeat;
+        background-size: 100%;
+        vertical-align: middle;
+      }
+      .liked{
+        background: url('../img/icon/followed.png') no-repeat;
+        background-size: 100%;
+      }
+    }
+    .talk{
+      background-color: #121619;
+      padding: 10px 15px;
+      ul li{
+        line-height: 2;
+        display: block;
+        i{
+          font-style: normal;
+          color: #337ab8;
+        }
+      }
+      .dialog{
+        display: none;
+        input{
+          width: 70%;
+          height: 35px;
+        }
+        button{
+          display: inline-block;
+          background-color: #313b46;
+          width: 25%;
+          height: 35px;
+          border: none;
+          border-radius: 5px;
+          vertical-align: bottom;
+        }
+      }
+    }
+  }
+}
