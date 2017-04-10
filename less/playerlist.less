@@ -1,3 +1,5 @@
+// out: ../css/playerlist.css, sourcemap: false, compress: true
+
 body{
 	 color: #b2b2b2 !important;
   background-color: #1b2026 !important;
@@ -9,6 +11,7 @@ body{
 		height: 120px;
 		position: relative;
 		background-color: #272e36;
+		border:1px solid transparent;
 		border-radius: 8px;
 		&:nth-child(1){
 			.col-xs-3{
@@ -120,6 +123,16 @@ body{
 				background: url(../img/icon/followed.png) no-repeat;
 				background-size: 100%;
 				}
+			.selected{
+				width: 1.2em;
+				height: 1.2em;
+				border-radius: 50%;
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate(-0.6em,-0.6em)
+			}
+		
 		   div{
 		   	text-align: center;
 		   	line-height: 1;
@@ -158,6 +171,12 @@ body{
 		}
 		.col-xs-6{
 			line-height: 100px;
+		}
+		&.select{
+		border:1px solid #be0601;
+			.selected{
+				background: #fff;
+			}
 		}
 	}
 	.followed-item{

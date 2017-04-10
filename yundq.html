@@ -18,6 +18,9 @@
     <link rel="stylesheet" type="text/css" href="./css/yundq.css">
     <link rel="stylesheet" type="text/css" href="./css/dropload.css">
     <link href="./node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <link href="http://cdn.bootcss.com/photoswipe/3.0.5/photoswipe.css" rel="stylesheet">
+
+
 </head>
 
 <body>
@@ -55,28 +58,28 @@
                     <div class="center-text">篮球感悟：萨达四大三季 度会看见爱上的看法服务我会儿或短索多 就看到很快就阿萨德卡萨丁就看到很快就阿萨德卡萨丁 爱的卡时间段发
                     </div>
                     <div class="center-img clearfix">
-                        <img src="./img/timg.jpg" class="col-xs-4" alt="">
-                        <img src="./img/timg.jpg" class="col-xs-4" alt="">
-                        <img src="./img/timg.jpg" class="col-xs-4" alt="">
-                    </div>
-                </div>
-                <div class="action text-right">
-                    <span class="like"></span>
-                    <img class="talk-btn" src="./img/icon/pl.png" alt="">
-                </div>
-                <div class="talk row">
-                    <ul>
-                        <li><i>张三:</i>sadasdasdsadsadas dadassadasdasdsadsadasdad </li>
-                        <li><i>张三张三张三:</i>sadasdasdsadsadasdadas</li>
-                        <li><i>张三张三:</i>sadasdasdsadsadasdadas</li>
-                        <li><i>张:</i>评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论</li>
-                    </ul>
-                    <div class="dialog">
-                        <input type="text" name="" value="">
-                        <button class='send'>发送</button>
-                    </div>
+                        <a href="images/full/004.jpg" class="col-xs-4"><img class="img-responsive" src="./img/timg.jpg" /></a>
+                        <a href="images/full/004.jpg" class="col-xs-4"><img class="img-responsive" src="./img/timg.jpg" /></a>
+                        <a href="images/full/004.jpg" class="col-xs-4"><img class="img-responsive" src="./img/timg.jpg" /></a>
 
-                </div>
+                    </div>
+                    <div class="action text-right">
+                        <span class="like"></span>
+                        <img class="talk-btn" src="./img/icon/pl.png" alt="">
+                    </div>
+                    <div class="talk row">
+                        <ul>
+                            <li><i>张三:</i>sadasdasdsadsadas dadassadasdasdsadsadasdad </li>
+                            <li><i>张三张三张三:</i>sadasdasdsadsadasdadas</li>
+                            <li><i>张三张三:</i>sadasdasdsadsadasdadas</li>
+                            <li><i>张:</i>评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论</li>
+                        </ul>
+                        <div class="dialog">
+                            <input type="text" name="" value="">
+                            <button class='send'>发送</button>
+                        </div>
+
+                    </div>
             </section>
 
             <section>
@@ -112,8 +115,8 @@
 
                 </div>
             </section>
+            </div>
         </div>
-    </div>
 
     </div>
     <footer>
@@ -122,13 +125,30 @@
     </footer>
     <script type="text/javascript" src="./node_modules/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="./js/dropload.min.js"></script>
+    <script type="text/javascript" src="klass.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="code.photoswipe-3.0.5.js"></script>
+    <script type="text/javascript" charset="utf-8" src="jquery.transit.js"></script>
+    <script type="text/javascript" charset="utf-8" src="hammer.js"></script>
+    <script type="text/javascript" charset="utf-8" src="jquery.hammer.js"></script>
+    <script type="text/javascript">
+        (function (window, PhotoSwipe) {
 
+            document.addEventListener('DOMContentLoaded', function () {
+
+                var
+                    options = {},
+                    instance = PhotoSwipe.attach(window.document.querySelectorAll('.gallery a'), options);
+
+            }, false);
+
+
+        }(window, window.Code.PhotoSwipe));
+    </script>
     <script>
-        $(function() {
-
-            $('.center-img img').on('click', function() {
+        $(function () {
+            $('.center-img img').on('click', function () {
                 var imgSrc = $(this).attr("src");
-                getImageWidth(imgSrc, function(w, h) {
+                getImageWidth(imgSrc, function (w, h) {
                     console.log({
                         width: w,
                         height: h
@@ -143,23 +163,26 @@
             // dropload
             $('.content').dropload({
                 scrollArea: window,
-                loadDownFn: function(me) {
+                loadDownFn: function (me) {
                     page++;
                     var result = '';
                     $.ajax({
                         type: 'GET',
-                        url: 'http://ons.me/tools/dropload/json.php?page=' + page + '&size=' + size,
+                        url: 'http://ons.me/tools/dropload/json.php?page=' + page +
+                            '&size=' + size,
                         dataType: 'json',
-                        success: function(data) {
+                        success: function (data) {
                             var arrLen = data.length;
                             if (arrLen > 0) {
                                 for (var i = 0; i < arrLen; i++) {
                                     // 拼接HTML  按上面的html中<section>拼接数据 每一个<section>
                                     // 为一个item
-                                    result += '<section><a class="item opacity" href="' + data[i].link + '">' +
+                                    result += '<section><a class="item opacity" href="' +
+                                        data[i].link + '">' +
                                         '<img src="' + data[i].pic + '" alt="">' +
                                         '<h3>' + data[i].title + '</h3>' +
-                                        '<span class="date">' + data[i].date + '</span>' +
+                                        '<span class="date">' + data[i].date +
+                                        '</span>' +
                                         '</a></section>';
                                 }
                             } else {
@@ -173,7 +196,7 @@
                             // 每次数据插入，必须重置
                             me.resetload();
                         },
-                        error: function(xhr, type) {
+                        error: function (xhr, type) {
                             alert('网络错误');
                             // 即使加载出错，也得重置
                             me.resetload();
@@ -194,21 +217,50 @@
                 callback(img.width, img.height);
             } else {
                 // 完全加载完毕的事件
-                img.onload = function() {
+                img.onload = function () {
                     callback(img.width, img.height);
                 }
             }
 
         }
+        var openPhotoSwipe = function () {
+            var pswpElement = document.querySelectorAll('.pswp')[0];
 
-        $('.talk-btn').on('click', function() {
+            // build items array
+            var items = [{
+                    src: './img/timg.jpg',
+                    w: 964,
+                    h: 1024
+                },
+                {
+                    src: './img/timg.jpg',
+                    w: 1024,
+                    h: 683
+                }
+            ];
+
+            // define options (if needed)
+            var options = {
+                // history & focus options are disabled on CodePen        
+                history: false,
+                focus: false,
+
+                showAnimationDuration: 0,
+                hideAnimationDuration: 0
+
+            };
+
+            var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
+            gallery.init();
+        };
+        $('.talk-btn').on('click', function () {
             $(this).parents('section').find('.dialog').fadeToggle();
             $(this).parents('section').find('.dialog input')[0].focus();
             console.log($(this).parents('section').find('.dialog').scrollTop());
 
         });
 
-        $('.send').on('click', function() {
+        $('.send').on('click', function () {
             if ($(this).prev().val().length > 400) {
                 alert('评论太长');
             } else if ($(this).prev().val()) {
@@ -222,7 +274,7 @@
 
         });
 
-        $('.like').on('click', function() {
+        $('.like').on('click', function () {
             $(this).hasClass('liked') ? $(this).removeClass('liked') : $(this).addClass('liked');
         });
     </script>
